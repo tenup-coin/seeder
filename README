@@ -1,7 +1,12 @@
-bitcoin-seeder
+pivx-seeder
 ==============
 
-Bitcoin-seeder is a crawler for the Bitcoin network, which exposes a list
+This software is forked from bitcoin-seeder and modified for PIVX network.
+
+Original version resides at https://github.com/sipa/bitcoin-seeder
+PIVX version resides at https://github.com/Warrows/pivx-seeder
+
+PIVX-seeder is a crawler for the Bitcoin network, which exposes a list
 of reliable nodes via a built-in DNS server.
 
 Features:
