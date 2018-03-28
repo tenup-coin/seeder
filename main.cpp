@@ -397,13 +397,13 @@ extern "C" void* ThreadStats(void*) {
   return nullptr;
 }
 
-static const string mainnet_seeds[] = {"pivx.seed.fuzzbawls.pw", "pivx.seed2.fuzzbawls.pw", "coin-server.com", "s3v3nh4cks.ddns.net", "178.254.23.111", "188.165.212.82", ""};
+static const string mainnet_seeds[] = {"zaka.seeds.agentr.io", "81.4.102.75", ""};
 static const string testnet_seeds[] = {""};
 static const string *seeds = mainnet_seeds;
 
 extern "C" void* ThreadSeeder(void*) {
   if (!fTestNet){
-    db.Add(CService("188.165.212.82", 51472), true);
+    db.Add(CService("81.4.102.75", 51472), true);
   }
   do {
     for (int i=0; seeds[i] != ""; i++) {
