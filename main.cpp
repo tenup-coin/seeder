@@ -35,7 +35,7 @@ public:
   CDnsSeedOpts() : nThreads(96), nDnsThreads(4), nPort(53), mbox(NULL), ns(NULL), host(NULL), tor(NULL), fUseTestNet(false), fWipeBan(false), fWipeIgnore(false), ipv4_proxy(NULL), ipv6_proxy(NULL) {}
 
   void ParseCommandLine(int argc, char **argv) {
-    static const char *help = "pivx-seeder\n"
+    static const char *help = "tenup-seeder\n"
                               "Usage: %s -h <host> -n <ns> [-m <mbox>] [-t <threads>] [-p <port>]\n"
                               "\n"
                               "Options:\n"
@@ -397,13 +397,15 @@ extern "C" void* ThreadStats(void*) {
   return nullptr;
 }
 
-static const string mainnet_seeds[] = {"zaka.seeds.agentr.io", "81.4.102.75", ""};
+static const string mainnet_seeds[] = {"tenup.io", "server7.tenup.io", ""};
 static const string testnet_seeds[] = {""};
 static const string *seeds = mainnet_seeds;
 
 extern "C" void* ThreadSeeder(void*) {
   if (!fTestNet){
-    db.Add(CService("81.4.102.75", 51472), true);
+    db.Add(CService("168.235.109.113", 51482), true);
+    db.Add(CService("168.235.78.242", 51482), true);
+    db.Add(CService("176.56.236.202", 51482), true);
   }
   do {
     for (int i=0; seeds[i] != ""; i++) {
