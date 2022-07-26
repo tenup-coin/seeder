@@ -397,7 +397,7 @@ extern "C" void* ThreadStats(void*) {
   return nullptr;
 }
 
-static const string mainnet_seeds[] = {"tenup.io", "server7.tenup.io", ""};
+static const string mainnet_seeds[] = {"seeder.tenup.io", "168.235.109.113", "168.235.78.242", "176.56.236.202", "107.161.18.110", "168.235.71.241", "168.235.94.180", "81.4.103.234", "185.52.1.105", "185.52.1.122", "168.235.88.149", "81.4.101.14", "134.147.31.230"};
 static const string testnet_seeds[] = {""};
 static const string *seeds = mainnet_seeds;
 
@@ -457,10 +457,10 @@ int main(int argc, char **argv) {
   bool fDNS = true;
   if (opts.fUseTestNet) {
       printf("Using testnet.\n");
-      pchMessageStart[0] = 0x90;
-      pchMessageStart[1] = 0xc4;
-      pchMessageStart[2] = 0xfd;
-      pchMessageStart[3] = 0xe9;
+      pchMessageStart[0] = 0x50;
+      pchMessageStart[1] = 0x79;
+      pchMessageStart[2] = 0x55;
+      pchMessageStart[3] = 0xcd;
       seeds = testnet_seeds;
       fTestNet = true;
   }
