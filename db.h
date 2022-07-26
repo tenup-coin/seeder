@@ -25,6 +25,7 @@ std::string static inline ToString(const CService &ip) {
   return str;
 }
 
+
 class CAddrStat {
 private:
   float weight;
